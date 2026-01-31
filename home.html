@@ -1,88 +1,118 @@
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: "Helvetica Neue", sans-serif;
-        background: linear-gradient(180deg, #2f4f3a, #ffffff);
-        color: #2f4f3a;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation Flow – Home</title>
 
-    .flower {
-        position: relative;
-        width: 600px;
-        height: 600px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", sans-serif;
+            background: linear-gradient(180deg, #2f4f3a, #ffffff);
+            color: #2f4f3a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .center {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        animation: pulse 3s ease-in-out infinite;
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.25);
-        backdrop-filter: blur(8px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-        font-size: 1.4rem;
-        font-weight: 600;
-        box-shadow: 0 0 40px rgba(0,0,0,0.2);
-    }
+        .flower {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .petal {
-        position: absolute;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-        color: white;
-        font-weight: 600;
-        text-decoration: none;
-        transition: 0.3s ease;
-        box-shadow: 0 0 25px rgba(0,0,0,0.2);
-    }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 3s ease-in-out infinite;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            box-shadow: 0 0 40px rgba(0,0,0,0.2);
+        }
 
-    .petal:hover {
-        transform: scale(1.1);
-    }
+        .petal {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s ease;
+            box-shadow: 0 0 25px rgba(0,0,0,0.2);
+        }
 
-    .p1 { background: #e57373; }
-    .p2 { background: #f06292; }
-    .p3 { background: #ba68c8; }
-    .p4 { background: #64b5f6; }
-    .p5 { background: #4db6ac; }
-    .p6 { background: #81c784; }
-    .p7 { background: #ffd54f; }
-    .p8 { background: #ffb74d; }
+        .petal:hover {
+            transform: scale(1.1);
+        }
 
-    @keyframes pulse {
-        0% { transform: translate(-50%, -50%) scale(1); }
-        50% { transform: translate(-50%, -50%) scale(1.06); }
-        100% { transform: translate(-50%, -50%) scale(1); }
-    }
+        /* Farben */
+        .p1 { background: #e57373; }
+        .p2 { background: #f06292; }
+        .p3 { background: #ba68c8; }
+        .p4 { background: #64b5f6; }
+        .p5 { background: #4db6ac; }
+        .p6 { background: #81c784; }
+        .p7 { background: #ffd54f; }
+        .p8 { background: #ffb74d; }
 
-    .petal:nth-of-type(1)  { transform: rotate(0deg)   translate(250px) rotate(0deg); }
-    .petal:nth-of-type(2)  { transform: rotate(45deg)  translate(250px) rotate(-45deg); }
-    .petal:nth-of-type(3)  { transform: rotate(90deg)  translate(250px) rotate(-90deg); }
-    .petal:nth-of-type(4)  { transform: rotate(135deg) translate(250px) rotate(-135deg); }
-    .petal:nth-of-type(5)  { transform: rotate(180deg) translate(250px) rotate(-180deg); }
-    .petal:nth-of-type(6)  { transform: rotate(225deg) translate(250px) rotate(-225deg); }
-    .petal:nth-of-type(7)  { transform: rotate(270deg) translate(250px) rotate(-270deg); }
-    .petal:nth-of-type(8)  { transform: rotate(315deg) translate(250px) rotate(-315deg); }
-</style>
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.06); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        /* Kreis-Anordnung */
+        .petal:nth-of-type(1)  { transform: rotate(0deg)   translate(250px) rotate(0deg); }
+        .petal:nth-of-type(2)  { transform: rotate(45deg)  translate(250px) rotate(-45deg); }
+        .petal:nth-of-type(3)  { transform: rotate(90deg)  translate(250px) rotate(-90deg); }
+        .petal:nth-of-type(4)  { transform: rotate(135deg) translate(250px) rotate(-135deg); }
+        .petal:nth-of-type(5)  { transform: rotate(180deg) translate(250px) rotate(-180deg); }
+        .petal:nth-of-type(6)  { transform: rotate(225deg) translate(250px) rotate(-225deg); }
+        .petal:nth-of-type(7)  { transform: rotate(270deg) translate(250px) rotate(-270deg); }
+        .petal:nth-of-type(8)  { transform: rotate(315deg) translate(250px) rotate(-315deg); }
+    </style>
+</head>
+
+<body>
+
+    <div class="flower">
+
+        <div class="center">Gehe deinen Weg</div>
+
+        <a href="gemeinschaft.html" class="petal p1">Gemeinschaft</a>
+        <a href="kinder.html" class="petal p2">Kinder</a>
+        <a href="wohnen.html" class="petal p3">Nachhaltig wohnen</a>
+        <a href="energie.html" class="petal p4">Energie</a>
+        <a href="lebensmittel.html" class="petal p5">Lebensmittel</a>
+        <a href="transport.html" class="petal p6">Transport & Raum</a>
+        <a href="rituale.html" class="petal p7">Rituale & Zyklen</a>
+        <a href="musik.html" class="petal p8">Musik & Kunst</a>
+
+    </div>
+
+</body>
+</html>
