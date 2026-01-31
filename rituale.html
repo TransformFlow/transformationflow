@@ -6,106 +6,101 @@
     <title>Rituale & Zyklen – Transformation Flow</title>
 
     <style>
-    <style>
-    body {
-        margin: 0;
-        padding: 40px;
-        font-family: "Helvetica Neue", sans-serif;
-        background: linear-gradient(180deg, #2f4f3a, #ffffff);
-        color: #2f4f3a;
-        min-height: 100vh;
-        line-height: 1.6;
-    }
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: "Helvetica Neue", sans-serif;
+            background: linear-gradient(180deg, #2f4f3a, #ffffff);
+            color: #2f4f3a;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
 
-    /* Jahreskreis-Layout */
-    .jahreskreis {
-        position: relative;
-        width: 320px;
-        height: 320px;
-        margin: 40px auto;
-        border-radius: 50%;
-        border: 2px solid #2f4f3a;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        /* Jahreskreis-Layout */
+        .jahreskreis {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            margin: 40px auto;
+            border-radius: 50%;
+            border: 2px solid #2f4f3a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .jahreskreis::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        background: #2f4f3a;
-        border-radius: 50%;
-        position: absolute;
-    }
+        .jahreskreis::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: #2f4f3a;
+            border-radius: 50%;
+            position: absolute;
+        }
 
-    .fest {
-        position: absolute;
-        width: 110px;
-        text-align: center;
-        font-size: 0.9rem;
-    }
+        .fest {
+            position: absolute;
+            width: 110px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
 
-    .fest span {
-        font-size: 0.8rem;
-        opacity: 0.8;
-    }
+        .fest span {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
 
-    /* Positionen im Kreis */
-    .fest-yule      { top: -10px; left: 50%; transform: translateX(-50%); }
-    .fest-imbolc    { top: 35px; right: -10px; transform: translateX(-50%); }
-    .fest-ostara    { top: 50%; right: -40px; transform: translateY(-50%); }
-    .fest-beltane   { bottom: 35px; right: -10px; transform: translateX(-50%); }
-    .fest-litha     { bottom: -10px; left: 50%; transform: translateX(-50%); }
-    .fest-lughnasadh{ bottom: 35px; left: -10px; transform: translateX(-50%); }
-    .fest-mabon     { top: 50%; left: -40px; transform: translateY(-50%); }
-    .fest-samhain   { top: 35px; left: -10px; transform: translateX(-50%); }
+        /* Positionen im Kreis */
+        .fest-yule      { top: -10px; left: 50%; transform: translateX(-50%); }
+        .fest-imbolc    { top: 35px; right: -10px; transform: translateX(-50%); }
+        .fest-ostara    { top: 50%; right: -40px; transform: translateY(-50%); }
+        .fest-beltane   { bottom: 35px; right: -10px; transform: translateX(-50%); }
+        .fest-litha     { bottom: -10px; left: 50%; transform: translateX(-50%); }
+        .fest-lughnasadh{ bottom: 35px; left: -10px; transform: translateX(-50%); }
+        .fest-mabon     { top: 50%; left: -40px; transform: translateY(-50%); }
+        .fest-samhain   { top: 35px; left: -10px; transform: translateX(-50%); }
 
-    .content {
-        max-width: 800px;
-        margin: 0 auto;
-        background: rgba(255, 255, 255, 0.85);
-        padding: 30px;
-        border-radius: 12px;
-    }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 12px;
+        }
 
-    a.back {
-        text-decoration: none;
-        color: #2f4f3a;
-        font-weight: bold;
-        font-size: 1.1rem;
-    }
+        a.back {
+            text-decoration: none;
+            color: #2f4f3a;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
 
-    h1 {
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        font-size: 2rem;
-    }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
 
-    h2 {
-        margin-top: 30px;
-        font-size: 1.4rem;
-    }
+        h2 {
+            margin-top: 30px;
+            font-size: 1.4rem;
+        }
 
-    h3 {
-        margin-top: 20px;
-        font-size: 1.2rem;
-    }
+        h3 {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
 
-    p {
-        margin-bottom: 20px;
-        font-size: 1.1rem;
-    }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
 
-    ul {
-        margin-bottom: 20px;
-        font-size: 1.1rem;
-    }
-</style>
-
-
-     
+        ul {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 
@@ -138,20 +133,19 @@
             <li><strong>Mabon (Herbsttagundnachtgleiche)</strong> – Gleichgewicht, Loslassen</li>
             <li><strong>Samhain</strong> – Ahnenzeit, Übergang, Innenschau</li>
         </ul>
+
         <h2>Jahreskreis – die acht Feste im Rad</h2>
 
-<div class="jahreskreis">
-    <div class="fest fest-yule">Yule<br><span>Wintersonnenwende</span></div>
-    <div class="fest fest-imbolc">Imbolc<br><span>Erstes Erwachen</span></div>
-    <div class="fest fest-ostara">Ostara<br><span>Frühlingstagundnachtgleiche</span></div>
-    <div class="fest fest-beltane">Beltane<br><span>Feuer & Verbindung</span></div>
-    <div class="fest fest-litha">Litha<br><span>Sommersonnenwende</span></div>
-    <div class="fest fest-lughnasadh">Lughnasadh<br><span>Erste Ernte</span></div>
-    <div class="fest fest-mabon">Mabon<br><span>Herbsttagundnachtgleiche</span></div>
-    <div class="fest fest-samhain">Samhain<br><span>Ahnenzeit</span></div>
-</div>
-
-        
+        <div class="jahreskreis">
+            <div class="fest fest-yule">Yule<br><span>Wintersonnenwende</span></div>
+            <div class="fest fest-imbolc">Imbolc<br><span>Erstes Erwachen</span></div>
+            <div class="fest fest-ostara">Ostara<br><span>Frühlingstagundnachtgleiche</span></div>
+            <div class="fest fest-beltane">Beltane<br><span>Feuer & Verbindung</span></div>
+            <div class="fest fest-litha">Litha<br><span>Sommersonnenwende</span></div>
+            <div class="fest fest-lughnasadh">Lughnasadh<br><span>Erste Ernte</span></div>
+            <div class="fest fest-mabon">Mabon<br><span>Herbsttagundnachtgleiche</span></div>
+            <div class="fest fest-samhain">Samhain<br><span>Ahnenzeit</span></div>
+        </div>
 
         <p>
             Diese Feste laden uns ein, bewusst innezuhalten und uns mit dem natürlichen Jahreslauf zu verbinden.
@@ -176,9 +170,7 @@
             die uns seit Millionen Jahren geprägt haben.
         </p>
 
-        <p>
-            Es beeinflusst:
-        </p>
+        <p>Es beeinflusst:</p>
 
         <ul>
             <li>unsere Schlafqualität</li>
@@ -212,10 +204,10 @@
         <p>In vielen indigenen Traditionen stehen die vier Richtungen für Kräfte, Qualitäten und innere Bewegungen:</p>
 
         <ul>
-            <li><strong>Osten – Neubeginn, Klarheit, Vision</strong><br>Das erste Licht. Der Atem des Morgens. Der Ort der Inspiration.</li>
-            <li><strong>Süden – Lebenskraft, Vertrauen, Wachstum</strong><br>Wärme, Feuer, Sommer. Der Ort der Freude und Lebendigkeit.</li>
-            <li><strong>Westen – Loslassen, Tiefe, Transformation</strong><br>Sonnenuntergang, Wasser, Emotion. Der Ort des inneren Wandels.</li>
-            <li><strong>Norden – Weisheit, Ruhe, Integration</strong><br>Kälte, Stille, Winter. Der Ort der Ahnen und der Klarheit.</li>
+            <li><strong>Osten – Neubeginn, Klarheit, Vision</strong><br>Das erste Licht. Der Atem des Morgens.</li>
+            <li><strong>Süden – Lebenskraft, Vertrauen, Wachstum</strong><br>Wärme, Feuer, Sommer.</li>
+            <li><strong>Westen – Loslassen, Tiefe, Transformation</strong><br>Sonnenuntergang, Wasser, Emotion.</li>
+            <li><strong>Norden – Weisheit, Ruhe, Integration</strong><br>Kälte, Stille, Winter.</li>
         </ul>
 
         <p>
