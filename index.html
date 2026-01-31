@@ -4,42 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transformation Flow</title>
+
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #f4f1e8; /* Naturweiß */
-            color: #2f3e2f; /* dunkles Waldgrün */
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Neue", sans-serif;
+            background: linear-gradient(180deg, #e8dcc5, #2f4f3a);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
         }
-        header {
-            background-color: #2f3e2f; /* Waldgrün */
-            color: #f4f1e8;
-            padding: 40px;
-            text-align: center;
+
+        .hero-image {
+            max-width: 90%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
+
+        .button {
+            margin-top: 40px;
+            padding: 14px 32px;
+            background-color: rgba(255,255,255,0.85);
+            color: #2f4f3a;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            text-decoration: none;
         }
-        section {
-            padding: 40px;
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.6;
+
+        .button:hover {
+            background-color: rgba(255,255,255,1);
+            transform: scale(1.05);
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Transformation Flow</h1>
-</header>
+    <img src="assets/images/LifeTree.png" class="hero-image" alt="Tree of Life">
 
-<section>
-    <h2>Willkommen</h2>
-    <p>Dies ist der Anfang deiner naturverbundenen, fließenden Website. Schritt für Schritt bauen wir hier deine Vision auf.</p>
-</section>
+    <a href="home.html" class="button">Let it flow</a>
 
 </body>
 </html>
