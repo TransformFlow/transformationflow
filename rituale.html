@@ -18,49 +18,40 @@
 
         /* Jahreskreis-Layout */
         .jahreskreis {
-    width: 380px;
-    height: 380px;
-    margin: 50px auto;
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 60px auto;
+    border-radius: 50%;
+    border: 3px solid #2f4f3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .fest {
-    width: 130px;
-    font-size: 0.95rem;
+    position: absolute;
+    width: 150px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.3;
 }
+
 .fest span {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    opacity: 0.8;
 }
 
+/* Neue, harmonische Positionen */
+.fest-yule      { top: -25px; left: 50%; transform: translateX(-50%); }
+.fest-imbolc    { top: 60px; right: -25px; transform: translateX(-50%); }
+.fest-ostara    { top: 50%; right: -70px; transform: translateY(-50%); }
+.fest-beltane   { bottom: 60px; right: -25px; transform: translateX(-50%); }
+.fest-litha     { bottom: -25px; left: 50%; transform: translateX(-50%); }
+.fest-lughnasadh{ bottom: 60px; left: -25px; transform: translateX(-50%); }
+.fest-mabon     { top: 50%; left: -70px; transform: translateY(-50%); }
+.fest-samhain   { top: 60px; left: -25px; transform: translateX(-50%); }
 
-        .jahreskreis::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-            background: #2f4f3a;
-            border-radius: 50%;
-            position: absolute;
-        }
-
-        .fest {
-            position: absolute;
-            width: 110px;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        .fest span {
-            font-size: 0.8rem;
-            opacity: 0.8;
-        }
-
-        /* Positionen im Kreis */
-        .fest-yule      { top: -20px; left: 50%; transform: translateX(-50%); }
-.fest-imbolc    { top: 35px; right: -20px; transform: translateX(-50%); }
-.fest-ostara    { top: 50%; right: -60px; transform: translateY(-50%); }
-.fest-beltane   { bottom: 35px; right: -20px; transform: translateX(-50%); }
-.fest-litha     { bottom: -20px; left: 50%; transform: translateX(-50%); }
-.fest-lughnasadh{ bottom: 35px; left: -20px; transform: translateX(-50%); }
-.fest-mabon     { top: 50%; left: -60px; transform: translateY(-50%); }
-.fest-samhain   { top: 35px; left: -20px; transform: translateX(-50%); }
 
 
         .content {
