@@ -18,8 +18,10 @@
             align-items: center;
         }
 .button-home {
-    display: inline-block;
-    margin-top: 10px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
     padding: 10px 18px;
     background-color: #2f4f3a;
     color: white;
@@ -29,6 +31,11 @@
     font-weight: bold;
     transition: background 0.2s ease;
 }
+
+.button-home:hover {
+    background-color: #3d6b4d;
+}
+
 
 .button-home:hover {
     background-color: #3d6b4d;
