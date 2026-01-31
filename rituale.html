@@ -13,7 +13,49 @@
             background: linear-gradient(180deg, #2f4f3a, #ffffff);
             color: #2f4f3a;
             min-height: 100vh;
-            line-height: 1.6;
+            line-height: 1.6;.jahreskreis {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 40px auto;
+    border-radius: 50%;
+    border: 2px solid #2f4f3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jahreskreis::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #2f4f3a;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.fest {
+    position: absolute;
+    width: 110px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.fest span {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Positionen im Kreis (oben startend, dann im Uhrzeigersinn) */
+.fest-yule      { top: -10px; left: 50%; transform: translateX(-50%); }
+.fest-imbolc    { top: 35px; right: -10px; transform: translateX(-50%); }
+.fest-ostara    { top: 50%; right: -40px; transform: translateY(-50%); }
+.fest-beltane   { bottom: 35px; right: -10px; transform: translateX(-50%); }
+.fest-litha     { bottom: -10px; left: 50%; transform: translateX(-50%); }
+.fest-lughnasadh{ bottom: 35px; left: -10px; transform: translateX(-50%); }
+.fest-mabon     { top: 50%; left: -40px; transform: translateY(-50%); }
+.fest-samhain   { top: 35px; left: -10px; transform: translateX(-50%); }
+
         }
 
         .content {
@@ -89,6 +131,20 @@
             <li><strong>Mabon (Herbsttagundnachtgleiche)</strong> – Gleichgewicht, Loslassen</li>
             <li><strong>Samhain</strong> – Ahnenzeit, Übergang, Innenschau</li>
         </ul>
+        <h2>Jahreskreis – die acht Feste im Rad</h2>
+
+<div class="jahreskreis">
+    <div class="fest fest-yule">Yule<br><span>Wintersonnenwende</span></div>
+    <div class="fest fest-imbolc">Imbolc<br><span>Erstes Erwachen</span></div>
+    <div class="fest fest-ostara">Ostara<br><span>Frühlingstagundnachtgleiche</span></div>
+    <div class="fest fest-beltane">Beltane<br><span>Feuer & Verbindung</span></div>
+    <div class="fest fest-litha">Litha<br><span>Sommersonnenwende</span></div>
+    <div class="fest fest-lughnasadh">Lughnasadh<br><span>Erste Ernte</span></div>
+    <div class="fest fest-mabon">Mabon<br><span>Herbsttagundnachtgleiche</span></div>
+    <div class="fest fest-samhain">Samhain<br><span>Ahnenzeit</span></div>
+</div>
+
+        
 
         <p>
             Diese Feste laden uns ein, bewusst innezuhalten und uns mit dem natürlichen Jahreslauf zu verbinden.
