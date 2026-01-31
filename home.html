@@ -16,17 +16,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
         }
 
-        /* Container für die ganze Blume */
         .flower {
             position: relative;
             width: 600px;
             height: 600px;
         }
 
-        /* Zentrales Element */
         .center {
             position: absolute;
             top: 50%;
@@ -42,77 +39,51 @@
             align-items: center;
             text-align: center;
             padding: 20px;
-           -filter: blur(8px);
+            font-size: 1.4rem;
+            font-weight: 600;
+            box-shadow: 0 0 40px rgba(0,0,0,0.2);
+        }
+
+        .petal {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 20px;
-            font-size: 1.4rem;
+            padding: 15px;
+            color: white;
             font-weight: 600;
-            font-size: 1.4rem;
-            font box-shadow: 0 0 40px rgba(0,0,0-weight: 600;
-            box-shadow: 0 0 40px rgba(0,0,0,0.2);
-        }
-
-,0.2);
-        }
-
-        /* Allgemeine Stilregeln für        /* Allgeme die Themenkreiseine Stilregeln für die Themenkreise */
-        .pet */
-        .petal {
-           al {
-            position: absolute;
-            width position: absolute: 150px;
-           ;
-            width: 150px;
-            height: 150px;
-            border height: 150px;
--radius: 50%;
-            display: flex;
-            justify            border-radius: 50%;
-            display: flex;
--content: center            justify-content: center;
-            align;
-            align-items: center;
--items: center;
-            text            text-align: center;
--align: center;
-            padding            padding: 15px;
-           : 15px;
-            color: white;
-            color: white;
-            font-weight: 600 font-weight: 600;
-            text;
-            text-decoration: none-decoration: none;
-            transition;
+            text-decoration: none;
             transition: 0.3s ease;
             box-shadow: 0 0 25px rgba(0,0,0,0.2);
         }
 
         .petal:hover {
-            transform: scale(1.08);
+            transform: scale(1.1);
         }
 
         /* Farben */
-        .p1 { background: #e57373; } /* Rot */
-        .p2 { background: #f06292; } /* Pink */
-        .p3 { background: #ba68c8; } /* Lila */
-        .p4 { background: #64b5f6; } /* Blau */
-        .p5 { background: #4db6ac; } /* Türkis */
-        .p6 { background: #81c784; } /* Grün */
-        .p7 { background: #ffd54f; } /* Gelb */
-        .p8 { background: #ffb74d; } /* Orange */
+        .p1 { background: #e57373; }
+        .p2 { background: #f06292; }
+        .p3 { background: #ba68c8; }
+        .p4 { background: #64b5f6; }
+        .p5 { background: #4db6ac; }
+        .p6 { background: #81c784; }
+        .p7 { background: #ffd54f; }
+        .p8 { background: #ffb74d; }
 
-        /* Positionen im Kreis */
-        .pos1 { top: 0%; left: 50%; transform: translate(-50%, 0); }
-        .pos2 { top: 15%; left: 85%; transform: translate(-50%, -50%); }
-        .pos3 { top: 50%; left: 100%; transform: translate(-100%, -50%); }
-        .pos4 { top: 85%; left: 85%; transform: translate(-50%, -50%); }
-        .pos5 { top: 100%; left: 50%; transform: translate(-50%, -100%); }
-        .pos6 { top: 85%; left: 15%; transform: translate(-50%, -50%); }
-        .pos7 { top: 50%; left: 0%; transform: translate(0, -50%); }
-        .pos8 { top: 15%; left: 15%; transform: translate(-50%, -50%); }
+        /* Kreis-Anordnung */
+        .petal:nth-child(2)  { transform: rotate(0deg)   translate(250px) rotate(0deg); }
+        .petal:nth-child(3)  { transform: rotate(45deg)  translate(250px) rotate(-45deg); }
+        .petal:nth-child(4)  { transform: rotate(90deg)  translate(250px) rotate(-90deg); }
+        .petal:nth-child(5)  { transform: rotate(135deg) translate(250px) rotate(-135deg); }
+        .petal:nth-child(6)  { transform: rotate(180deg) translate(250px) rotate(-180deg); }
+        .petal:nth-child(7)  { transform: rotate(225deg) translate(250px) rotate(-225deg); }
+        .petal:nth-child(8)  { transform: rotate(270deg) translate(250px) rotate(-270deg); }
+        .petal:nth-child(9)  { transform: rotate(315deg) translate(250px) rotate(-315deg); }
 
     </style>
 </head>
@@ -121,18 +92,16 @@
 
     <div class="flower">
 
-        <div class="center">
-            Gehe deinen Weg
-        </div>
+        <div class="center">Gehe deinen Weg</div>
 
-        <a href="gemeinschaft.html" class="petal p1 pos1">Gemeinschaft</a>
-        <a href="kinder.html" class="petal p2 pos2">Kinder</a>
-        <a href="wohnen.html" class="petal p3 pos3">Nachhaltig wohnen</a>
-        <a href="energie.html" class="petal p4 pos4">Energie</a>
-        <a href="lebensmittel.html" class="petal p5 pos5">Lebensmittel</a>
-        <a href="transport.html" class="petal p6 pos6">Transport & Raum</a>
-        <a href="rituale.html" class="petal p7 pos7">Rituale & Zyklen</a>
-        <a href="musik.html" class="petal p8 pos8">Musik & Kunst</a>
+        <a href="gemeinschaft.html" class="petal p1">Gemeinschaft</a>
+        <a href="kinder.html" class="petal p2">Kinder</a>
+        <a href="wohnen.html" class="petal p3">Nachhaltig wohnen</a>
+        <a href="energie.html" class="petal p4">Energie</a>
+        <a href="lebensmittel.html" class="petal p5">Lebensmittel</a>
+        <a href="transport.html" class="petal p6">Transport & Raum</a>
+        <a href="rituale.html" class="petal p7">Rituale & Zyklen</a>
+        <a href="musik.html" class="petal p8">Musik & Kunst</a>
 
     </div>
 
