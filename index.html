@@ -19,18 +19,27 @@
             overflow: hidden;
         }
 
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
         .hero-image {
-            background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 12px;
             max-width: 100%;
             max-height: 90vh;
             object-fit: contain;
             border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            filter: drop-shadow(0 0 60px rgba(255, 255, 255, 0.25));
+
+            /* Weicher, organischer Übergang */
+            box-shadow: 0 0 80px rgba(255, 255, 255, 0.15);
+            filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.4));
         }
 
         .button {
-            margin-top: 40px;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
             padding: 14px 32px;
             background-color: rgba(255,255,255,0.85);
             color: #2f4f3a;
@@ -45,19 +54,17 @@
 
         .button:hover {
             background-color: rgba(255,255,255,1);
-            transform: scale(1.05);
+            transform: translateX(-50%) scale(1.05);
         }
     </style>
 </head>
 
 <body>
 
-    <img src="assets/images/LifeTree.png" class="hero-image" alt="Tree of Life">
-
-    <a href="home.html" class="button">Let it flow</a>
+    <div class="image-container">
+        <img src="assets/images/LifeTree.png" class="hero-image" alt="Tree of Life">
+        <a href="home.html" class="button">Let it flow</a>
+    </div>
 
 </body>
 </html>
-
-
-
