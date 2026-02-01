@@ -13,9 +13,7 @@
             background: linear-gradient(180deg, #2f4f3a, #ffffff);
             color: #2f4f3a;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center; /* Desktop wieder zentriert */
+            /* WICHTIG: KEIN FLEX MEHR */
         }
 
         /* Home-Button */
@@ -43,6 +41,7 @@
             position: relative;
             width: 600px;
             height: 600px;
+            margin: 0 auto; /* Desktop-Zentrierung */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -121,16 +120,12 @@
 
             body {
                 padding-top: 40px; /* Abstand oben */
-                display: block;    /* Kein Flex → kein Hochrutschen */
-                height: auto;
-                align-items: flex-start; /* WICHTIG – überschreibt Desktop */
             }
 
             .flower {
                 width: 300px;
                 height: 300px;
-                margin: 0 auto;
-                position: relative;
+                margin-top: 20px;
             }
 
             .center {
