@@ -21,7 +21,7 @@
     position: relative;
     width: 450px;
     height: 450px;
-    margin: 60px auto;
+    margin: 80px auto;
     border-radius: 50%;
     border: 3px solid #2f4f3a;
     display: flex;
@@ -44,12 +44,12 @@
 
 /* Neue, harmonische Positionen */
 .fest-yule      { top: -25px; left: 50%; transform: translateX(-50%); }
-.fest-imbolc    { top: 60px; right: -25px; transform: translateX(-50%); }
-.fest-ostara    { top: 50%; right: -70px; transform: translateY(-50%); }
-.fest-beltane   { bottom: 60px; right: -25px; transform: translateX(-50%); }
+.fest-imbolc    { top: 50px; right: -25px; transform: translateX(-50%); }
+.fest-ostara    { top: 50%; right: -50px; transform: translateY(-50%); }
+.fest-beltane   { bottom: 50px; right: -15px; transform: translateX(-50%); }
 .fest-litha     { bottom: -25px; left: 50%; transform: translateX(-50%); }
-.fest-lughnasadh{ bottom: 60px; left: -25px; transform: translateX(-50%); }
-.fest-mabon     { top: 50%; left: -70px; transform: translateY(-50%); }
+.fest-lughnasadh{ bottom: 50px; left: -1ßpx; transform: translateX(-50%); }
+.fest-mabon     { top: 50%; left: -50px; transform: translateY(-50%); }
 .fest-samhain   { top: 60px; left: -25px; transform: translateX(-50%); }
 
 
@@ -94,6 +94,15 @@
         ul {
             margin-bottom: 20px;
             font-size: 1.1rem;
+        }
+        @media (max-width: 600px)
+        { .jahreskreis { 
+            width: 300px;
+            height: 300px; }
+         .fest {
+             width: 100px;
+             font-size: 0.85rem;
+               }
         }
     </style>
 </head>
