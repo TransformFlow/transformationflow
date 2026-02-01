@@ -16,44 +16,6 @@
             line-height: 1.6;
         }
 
-        /* Jahreskreis-Layout */
-        .jahreskreis {
-    position: relative;
-    width: 450px;
-    height: 450px;
-    margin: 80px auto;
-    border-radius: 50%;
-    border: 3px solid #2f4f3a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fest {
-    position: absolute;
-    width: 150px;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.3;
-}
-
-.fest span {
-    font-size: 0.85rem;
-    opacity: 0.8;
-}
-
-/* Neue, harmonische Positionen */
-.fest-yule      { top: -25px; left: 50%; transform: translateX(-50%); }
-.fest-imbolc    { top: 50px; right: -25px; transform: translateX(-50%); }
-.fest-ostara    { top: 50%; right: -50px; transform: translateY(-50%); }
-.fest-beltane   { bottom: 50px; right: -15px; transform: translateX(-50%); }
-.fest-litha     { bottom: -25px; left: 50%; transform: translateX(-50%); }
-.fest-lughnasadh{ bottom: 50px; left: -1ßpx; transform: translateX(-50%); }
-.fest-mabon     { top: 50%; left: -50px; transform: translateY(-50%); }
-.fest-samhain   { top: 60px; left: -25px; transform: translateX(-50%); }
-
-
-
         .content {
             max-width: 800px;
             margin: 0 auto;
@@ -76,33 +38,23 @@
             font-size: 2rem;
         }
 
+        img.jahreskreis {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 0 auto 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        }
+
         h2 {
             margin-top: 30px;
             font-size: 1.4rem;
         }
 
-        h3 {
-            margin-top: 20px;
-            font-size: 1.2rem;
-        }
-
         p {
-            margin-bottom: 20px;
             font-size: 1.1rem;
-        }
-
-        ul {
             margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        @media (max-width: 600px)
-        { .jahreskreis { 
-            width: 300px;
-            height: 300px; }
-         .fest {
-             width: 100px;
-             font-size: 0.85rem;
-               }
         }
     </style>
 </head>
@@ -115,137 +67,34 @@
 
         <h1>Rituale & Zyklen</h1>
 
-        <h2>Rückkehr zu natürlichen Rhythmen</h2>
+        <!-- Deine neue Grafik -->
+        <img src="assets/images/Jahreskreis.jpg" alt="Jahreskreis" class="jahreskreis">
+
+        <h2>Zyklen als Orientierung</h2>
         <p>
-            Rituale verbinden uns mit dem, was größer ist als wir selbst:  
-            den Zyklen der Natur, dem Atem der Erde, dem Wandel der Jahreszeiten.
-            In einer Welt, die immer schneller wird, erinnern uns Rituale daran,
-            dass alles seine Zeit hat – Werden, Wachsen, Reifen, Ruhen.
+            Der Jahreskreis erinnert uns daran, dass alles im Leben rhythmisch ist:  
+            Licht und Dunkelheit, Aktivität und Ruhe, Innen und Außen.
         </p>
 
-        <h2>Die acht Jahreskreisfeste</h2>
-        <p>Der Jahreskreis ist ein uraltes Rad, das uns durch das Jahr führt:</p>
-
-        <ul>
-            <li><strong>Yule (Wintersonnenwende)</strong> – die Wiedergeburt des Lichts</li>
-            <li><strong>Imbolc</strong> – das erste Erwachen, die Rückkehr der Lebenskräfte</li>
-            <li><strong>Ostara (Frühlingstagundnachtgleiche)</strong> – Balance, Neubeginn</li>
-            <li><strong>Beltane</strong> – Feuer, Lebenskraft, Verbindung</li>
-            <li><strong>Litha (Sommersonnenwende)</strong> – die Fülle des Lichts</li>
-            <li><strong>Lughnasadh</strong> – erste Ernte, Dankbarkeit</li>
-            <li><strong>Mabon (Herbsttagundnachtgleiche)</strong> – Gleichgewicht, Loslassen</li>
-            <li><strong>Samhain</strong> – Ahnenzeit, Übergang, Innenschau</li>
-        </ul>
-
-        <h2>Jahreskreis – die acht Feste im Rad</h2>
-
-        <div class="jahreskreis">
-            <div class="fest fest-yule">Yule<br><span>Wintersonnenwende</span></div>
-            <div class="fest fest-imbolc">Imbolc<br><span>Erstes Erwachen</span></div>
-            <div class="fest fest-ostara">Ostara<br><span>Frühlingstagundnachtgleiche</span></div>
-            <div class="fest fest-beltane">Beltane<br><span>Feuer & Verbindung</span></div>
-            <div class="fest fest-litha">Litha<br><span>Sommersonnenwende</span></div>
-            <div class="fest fest-lughnasadh">Lughnasadh<br><span>Erste Ernte</span></div>
-            <div class="fest fest-mabon">Mabon<br><span>Herbsttagundnachtgleiche</span></div>
-            <div class="fest fest-samhain">Samhain<br><span>Ahnenzeit</span></div>
-        </div>
-
+        <h2>Rituale als Anker</h2>
         <p>
-            Diese Feste laden uns ein, bewusst innezuhalten und uns mit dem natürlichen Jahreslauf zu verbinden.
+            Rituale geben Halt, schaffen Verbindung und bringen uns in Kontakt mit uns selbst  
+            und der Gemeinschaft. Sie müssen nicht groß sein – ein Moment der Präsenz reicht.
         </p>
 
-        <h2>Mond- und Sonnenzyklen</h2>
+        <h2>Natürliche Übergänge feiern</h2>
         <p>
-            Unsere Vorfahren lebten im Rhythmus von Sonne und Mond:
-            Sonnenaufgang, Sonnenuntergang, Mondphasen, Jahreszeiten.
-            Diese Zyklen wirken bis heute in unseren Körpern – in Hormonen, Schlaf, Energie, Emotionen.
+            Sonnenwenden, Tag‑und‑Nacht‑Gleichen, Mondphasen, Erntezeiten –  
+            all das sind natürliche Marker, die uns helfen, bewusster zu leben.
         </p>
 
+        <h2>Rituale im Alltag</h2>
         <p>
-            Der Mond erinnert uns an Wandel und Intuition.  
-            Die Sonne erinnert uns an Klarheit und Kraft.  
-            Beide zusammen halten unser inneres Gleichgewicht.
-        </p>
-
-        <h2>Wie künstliches Licht unsere Rhythmen stört</h2>
-        <p>
-            Synthetisches Licht – vor allem nachts – trennt uns von den natürlichen Rhythmen,
-            die uns seit Millionen Jahren geprägt haben.
-        </p>
-
-        <p>Es beeinflusst:</p>
-
-        <ul>
-            <li>unsere Schlafqualität</li>
-            <li>unsere Hormone (Melatonin, Cortisol)</li>
-            <li>unsere Stimmung und Konzentration</li>
-            <li>die Orientierung von Tieren</li>
-            <li>das Wachstum von Pflanzen</li>
-        </ul>
-
-        <p>
-            Wenn wir wieder mehr mit natürlichem Licht leben – Sonnenlicht am Morgen,
-            Dunkelheit am Abend, Kerzen, Feuer, Mondlicht – finden wir zurück in einen Rhythmus,
-            der uns nährt statt erschöpft.
-        </p>
-
-        <h2>Schamanismus, die vier Himmelsrichtungen & eine Philosophie des Verbundenseins</h2>
-
-        <h3>Schamanismus – die Kunst, mit der Welt zu sprechen</h3>
-        <p>
-            Schamanismus ist keine Religion, sondern eine Haltung.  
-            Eine Art, die Welt zu sehen: dass alles belebt ist, alles Bewusstsein trägt,  
-            alles miteinander spricht — Pflanzen, Tiere, Steine, Wasser, Wind, Feuer, Erde.
-        </p>
-        <p>
-            Schamanismus erinnert uns daran, dass wir nicht getrennt sind.  
-            Dass wir Teil eines großen Netzes sind, das uns trägt, nährt und formt.  
-            Es geht nicht darum, Rituale „zu machen“, sondern darum, wieder zuzuhören.
-        </p>
-
-        <h3>Die vier Himmelsrichtungen</h3>
-        <p>In vielen indigenen Traditionen stehen die vier Richtungen für Kräfte, Qualitäten und innere Bewegungen:</p>
-
-        <ul>
-            <li><strong>Osten – Neubeginn, Klarheit, Vision</strong><br>Das erste Licht. Der Atem des Morgens.</li>
-            <li><strong>Süden – Lebenskraft, Vertrauen, Wachstum</strong><br>Wärme, Feuer, Sommer.</li>
-            <li><strong>Westen – Loslassen, Tiefe, Transformation</strong><br>Sonnenuntergang, Wasser, Emotion.</li>
-            <li><strong>Norden – Weisheit, Ruhe, Integration</strong><br>Kälte, Stille, Winter.</li>
-        </ul>
-
-        <p>
-            Wenn wir uns im Kreis bewegen, bewegen wir uns durch diese Kräfte — außen wie innen.  
-            Jede Richtung ist ein Spiegel für einen inneren Prozess.
-        </p>
-
-        <h3>Die Philosophie dahinter</h3>
-        <p>
-            Die Philosophie der vier Richtungen ist einfach und tief zugleich:  
-            Alles ist zyklisch. Alles hat seine Zeit. Nichts bleibt, wie es ist — und genau darin liegt Frieden.
-        </p>
-        <p>
-            Es ist eine Philosophie der Verbundenheit, nicht der Trennung.  
-            Eine Philosophie des Hörens, nicht des Wissens.  
-            Eine Philosophie des Kreises, nicht der Hierarchie.
-        </p>
-
-        <h3>Warum das heute wichtig ist</h3>
-        <p>
-            In einer Welt voller künstlicher Rhythmen — künstliches Licht, künstliche Zeit, künstliche Ablenkung —  
-            verlieren wir leicht den Kontakt zu dem, was uns eigentlich führt: Sonne, Mond, Jahreszeiten, Elemente,  
-            innere Bewegungen.
-        </p>
-        <p>
-            Schamanische Sichtweisen und die vier Richtungen helfen uns, wieder in Beziehung zu gehen:  
-            mit uns selbst, mit anderen, mit der Erde.
-        </p>
-
-        <h2>Einladung</h2>
-        <p>
-            Diese Seite lädt dich ein, Rituale wieder als Weg zu sehen:
-            als Erinnerung an das, was uns trägt.  
-            Als Rückkehr zu den Zyklen, die uns formen.  
-            Als Einladung, wieder im Einklang mit der Natur zu leben.
+            Ein Lied am Morgen.  
+            Ein Kreis am Feuer.  
+            Ein Atemzug vor dem Essen.  
+            Ein Dank am Abend.  
+            Kleine Gesten, die das Leben weicher machen.
         </p>
 
     </div>
