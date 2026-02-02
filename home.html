@@ -15,12 +15,14 @@
             min-height: 100vh;
         }
 
-        /* Wrapper für zentrierte Blume (nicht der Body) */
+        /* Zentrierung der Blume */
         .flower-wrapper {
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 40px; /* verhindert Kollision mit Home-Button */
+            box-sizing: border-box;
         }
 
         /* Home-Button */
@@ -48,7 +50,6 @@
             position: relative;
             width: 600px;
             height: 600px;
-            margin: 0 auto;
         }
 
         .center {
@@ -122,18 +123,14 @@
         /* MOBILE VERSION */
         @media (max-width: 600px) {
 
-            body {
-                padding-top: 40px;
-            }
-
             .flower-wrapper {
                 align-items: flex-start;
+                padding-top: 80px;
             }
 
             .flower {
                 width: 300px;
                 height: 300px;
-                margin-top: 40px;
             }
 
             .center {
@@ -158,13 +155,6 @@
             .petal:nth-of-type(6)  { transform: rotate(225deg) translate(150px) rotate(-225deg); }
             .petal:nth-of-type(7)  { transform: rotate(270deg) translate(150px) rotate(-270deg); }
             .petal:nth-of-type(8)  { transform: rotate(315deg) translate(150px) rotate(-315deg); }
-
-            .button-home {
-                top: 10px;
-                left: 10px;
-                padding: 8px 14px;
-                font-size: 0.9rem;
-            }
         }
     </style>
 </head>
