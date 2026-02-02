@@ -13,7 +13,14 @@
             background: linear-gradient(180deg, #2f4f3a, #ffffff);
             color: #2f4f3a;
             min-height: 100vh;
-            /* WICHTIG: KEIN FLEX MEHR */
+        }
+
+        /* Wrapper für zentrierte Blume (nicht der Body) */
+        .flower-wrapper {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         /* Home-Button */
@@ -41,10 +48,7 @@
             position: relative;
             width: 600px;
             height: 600px;
-            margin: 0 auto; /* Desktop-Zentrierung */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin: 0 auto;
         }
 
         .center {
@@ -119,13 +123,17 @@
         @media (max-width: 600px) {
 
             body {
-                padding-top: 40px; /* Abstand oben */
+                padding-top: 40px;
+            }
+
+            .flower-wrapper {
+                align-items: flex-start;
             }
 
             .flower {
                 width: 300px;
                 height: 300px;
-                margin-top: 20px;
+                margin-top: 40px;
             }
 
             .center {
@@ -142,7 +150,6 @@
                 padding: 10px;
             }
 
-            /* Mobile-Kreis-Anordnung */
             .petal:nth-of-type(1)  { transform: rotate(0deg)   translate(150px) rotate(0deg); }
             .petal:nth-of-type(2)  { transform: rotate(45deg)  translate(150px) rotate(-45deg); }
             .petal:nth-of-type(3)  { transform: rotate(90deg)  translate(150px) rotate(-90deg); }
@@ -166,19 +173,21 @@
 
     <a href="index.html" class="button-home">🏡 Zur Startseite</a>
 
-    <div class="flower">
+    <div class="flower-wrapper">
+        <div class="flower">
 
-        <div class="center">Gehe deinen Weg</div>
+            <div class="center">Gehe deinen Weg</div>
 
-        <a href="gemeinschaft.html" class="petal p1">Gemeinschaft</a>
-        <a href="kinder.html" class="petal p2">Kinder</a>
-        <a href="wohnen.html" class="petal p3">Wohnen</a>
-        <a href="energie.html" class="petal p4">Energie</a>
-        <a href="lebensmittel.html" class="petal p5">Lebensmittel</a>
-        <a href="raumnutzung.html" class="petal p6">Raumnutzung</a>
-        <a href="rituale.html" class="petal p7">Rituale & Zyklen</a>
-        <a href="musik.html" class="petal p8">Musik & Kunst</a>
+            <a href="gemeinschaft.html" class="petal p1">Gemeinschaft</a>
+            <a href="kinder.html" class="petal p2">Kinder</a>
+            <a href="wohnen.html" class="petal p3">Wohnen</a>
+            <a href="energie.html" class="petal p4">Energie</a>
+            <a href="lebensmittel.html" class="petal p5">Lebensmittel</a>
+            <a href="raumnutzung.html" class="petal p6">Raumnutzung</a>
+            <a href="rituale.html" class="petal p7">Rituale & Zyklen</a>
+            <a href="musik.html" class="petal p8">Musik & Kunst</a>
 
+        </div>
     </div>
 
 </body>
