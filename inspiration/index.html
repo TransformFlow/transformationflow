@@ -1,2 +1,92 @@
-<h1>Inspiration</h1>
-<p>Hier entsteht die zoombare Kreis-Galerie.</p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiration</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #faf7f2;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .circle-container {
+            position: relative;
+            width: 600px;
+            height: 600px;
+        }
+
+        .topic {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .topic:hover {
+            transform: scale(1.1);
+        }
+
+        /* Positionen der 8 Kreise */
+        .t1 { top: 0; left: 230px; }
+        .t2 { top: 80px; left: 430px; }
+        .t3 { top: 250px; left: 500px; }
+        .t4 { top: 420px; left: 430px; }
+        .t5 { top: 500px; left: 230px; }
+        .t6 { top: 420px; left: 30px; }
+        .t7 { top: 250px; left: 0; }
+        .t8 { top: 80px; left: 30px; }
+
+        .center {
+            position: absolute;
+            top: 230px;
+            left: 230px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: #e8dfd5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle-container">
+
+        <div class="center">Inspiration</div>
+
+        <a href="/pages/gemeinschaft.html" class="topic t1">Gemeinschaft</a>
+        <a href="/pages/kinder.html" class="topic t2">Kinder</a>
+        <a href="/pages/wohnen.html" class="topic t3">Wohnen</a>
+        <a href="/pages/energie.html" class="topic t4">Energie</a>
+        <a href="/pages/lebensmittel.html" class="topic t5">Lebensmittel</a>
+        <a href="/pages/raumnutzung.html" class="topic t6">Raumnutzung</a>
+        <a href="/pages/rituale.html" class="topic t7">Rituale & Zyklen</a>
+        <a href="/pages/musik.html" class="topic t8">Musik & Kunst</a>
+
+    </div>
+
+</body>
+</html>
