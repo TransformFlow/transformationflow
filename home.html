@@ -10,12 +10,36 @@
             margin: 0;
             padding: 0;
             font-family: "Helvetica Neue", sans-serif;
-            background: linear-gradient(180deg, #2f4f3a, #ffffff);
+            background: linear-gradient(180deg, #2f4f3a 0%, #b7e7b0 40%, #f7e8d5 80%, #e0f7fa 100%);
             color: #2f4f3a;
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center; /* Desktop wieder zentriert */
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Animierte, dezente Hintergrundkreise */
+        .bg-circles {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.18;
+            filter: blur(2px);
+            animation: floatBg 12s ease-in-out infinite alternate;
+        }
+        .bg1 { width: 420px; height: 420px; background: #b7e7b0; left: 8vw; top: 10vh; animation-delay: 0s; }
+        .bg2 { width: 260px; height: 260px; background: #ffd54f; right: 10vw; top: 18vh; animation-delay: 2s; }
+        .bg3 { width: 320px; height: 320px; background: #ba68c8; left: 18vw; bottom: 8vh; animation-delay: 4s; }
+        .bg4 { width: 180px; height: 180px; background: #4db6ac; right: 16vw; bottom: 12vh; animation-delay: 6s; }
+        @keyframes floatBg {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(-30px) scale(1.07); }
         }
 
         /* Home-Button */
@@ -46,6 +70,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            z-index: 2;
+            box-shadow: 0 0 80px 0 rgba(46,204,64,0.10), 0 8px 40px 0 rgba(47,79,58,0.10);
+            animation: flowerFloat 5s ease-in-out infinite alternate;
+        }
+        @keyframes flowerFloat {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-18px); }
         }
 
         .center {
@@ -57,16 +88,17 @@
             width: 180px;
             height: 180px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.25);
-            backdrop-filter: blur(8px);
+            background: rgba(255,255,255,0.35);
+            backdrop-filter: blur(10px);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
             font-size: 1.4rem;
             font-weight: 600;
-            box-shadow: 0 0 40px rgba(0,0,0,0.2);
+            box-shadow: 0 0 60px 0 #b7e7b0, 0 0 40px rgba(0,0,0,0.18);
         }
 
         .petal {
@@ -82,12 +114,16 @@
             color: white;
             font-weight: 600;
             text-decoration: none;
-            transition: 0.3s ease;
-            box-shadow: 0 0 25px rgba(0,0,0,0.2);
+            transition: 0.3s box-shadow, 0.3s filter, 0.3s transform;
+            box-shadow: 0 0 25px rgba(0,0,0,0.18), 0 0 0 0 #fff;
+            filter: drop-shadow(0 0 8px rgba(46,204,64,0.10));
         }
 
         .petal:hover {
-            transform: scale(1.1);
+            transform: scale(1.12);
+            box-shadow: 0 0 40px 8px #fffbe6, 0 0 60px 0 #b7e7b0, 0 0 25px rgba(0,0,0,0.18);
+            filter: drop-shadow(0 0 16px #b7e7b0);
+            z-index: 2;
         }
 
         /* Farben */
@@ -169,12 +205,22 @@
 
 <body>
 
+
+    <!-- Animierte Hintergrundkreise -->
+    <div class="bg-circles">
+        <div class="bg-circle bg1"></div>
+        <div class="bg-circle bg2"></div>
+        <div class="bg-circle bg3"></div>
+        <div class="bg-circle bg4"></div>
+    </div>
+
     <a href="index.html" class="button-home">🏡 Zur Startseite</a>
 
-  <div class="flower">
-
-        <div class="center">Gehe deinen Weg</div>
-
+    <div class="flower">
+        <div class="center">
+            <span style="font-size:2.2rem; display:block; margin-bottom:8px;">🌱</span>
+            Gehe deinen Weg
+        </div>
         <a href="pages/gemeinschaft.html" class="petal p1">Gemeinschaft</a>
         <a href="pages/kinder.html" class="petal p2">Kinder</a>
         <a href="pages/wohnen.html" class="petal p3">Wohnen</a>
@@ -183,7 +229,6 @@
         <a href="pages/raumnutzung.html" class="petal p6">Raumnutzung</a>
         <a href="pages/rituale.html" class="petal p7">Rituale & Zyklen</a>
         <a href="pages/musik.html" class="petal p8">Musik & Kunst</a>
-
     </div>
 
 
