@@ -75,15 +75,20 @@
             background: linear-gradient(135deg, #e0f7fa 60%, #fffbe6 100%);
         }
 
-        /* Positionen der 8 Kreise */
-        .t1 { top: 0; left: 275px; }
-        .t2 { top: 80px; left: 480px; }
-        .t3 { top: 270px; left: 540px; }
-        .t4 { top: 500px; left: 430px; }
-        .t5 { top: 600px; left: 275px; }
-        .t6 { top: 500px; left: 60px; }
-        .t7 { top: 270px; left: 0; }
-        .t8 { top: 80px; left: 60px; }
+        /* Gleichmäßige Kreispositionierung der 8 Kreise */
+        .topic {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .t1 { transform: translate(-50%, -50%) rotate(0deg) translate(0, -270px) rotate(0deg); }
+        .t2 { transform: translate(-50%, -50%) rotate(45deg) translate(0, -270px) rotate(-45deg); }
+        .t3 { transform: translate(-50%, -50%) rotate(90deg) translate(0, -270px) rotate(-90deg); }
+        .t4 { transform: translate(-50%, -50%) rotate(135deg) translate(0, -270px) rotate(-135deg); }
+        .t5 { transform: translate(-50%, -50%) rotate(180deg) translate(0, -270px) rotate(-180deg); }
+        .t6 { transform: translate(-50%, -50%) rotate(225deg) translate(0, -270px) rotate(-225deg); }
+        .t7 { transform: translate(-50%, -50%) rotate(270deg) translate(0, -270px) rotate(-270deg); }
+        .t8 { transform: translate(-50%, -50%) rotate(315deg) translate(0, -270px) rotate(-315deg); }
 
         .center {
             position: absolute;
@@ -137,9 +142,32 @@
             .t8 { top: 12vw; left: 10vw; }
         }
     </style>
+        <style>
+        .home-btn {
+            display: inline-block;
+            background: #2ecc40;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 32px 0 0 40px;
+            box-shadow: 0 2px 8px rgba(46,204,64,0.15);
+            transition: background 0.2s;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+        .home-btn:hover {
+            background: #27ae60;
+        }
+        </style>
 </head>
 
 <body>
+    <a href="/home.html" class="home-btn">Zurück zur Startseite</a>
     <header>
         Inspiration – Ideen für ein gutes Leben
         <svg class="header-wave" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
