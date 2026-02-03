@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: "Helvetica Neue", sans-serif;
-            background: linear-gradient(180deg, #2f4f3a 0%, #b7e7b0 40%, #f7e8d5 80%, #e0f7fa 100%);
+            background: linear-gradient(180deg, #e0f7fa 0%, #f7e8d5 100%);
             color: #2f4f3a;
             min-height: 100vh;
             display: flex;
@@ -19,27 +19,38 @@
             overflow: hidden;
         }
 
-        /* Animierte, dezente Hintergrundkreise */
-        .bg-circles {
+
+        /* Animierte Schmetterlinge im Hintergrund */
+        .butterfly-bg {
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
             pointer-events: none;
             z-index: 0;
         }
-        .bg-circle {
+        .butterfly {
             position: absolute;
-            border-radius: 50%;
-            opacity: 0.18;
-            filter: blur(2px);
-            animation: floatBg 12s ease-in-out infinite alternate;
+            width: 48px;
+            height: 48px;
+            opacity: 0.55;
+            animation: fly 18s linear infinite;
         }
-        .bg1 { width: 420px; height: 420px; background: #b7e7b0; left: 8vw; top: 10vh; animation-delay: 0s; }
-        .bg2 { width: 260px; height: 260px; background: #ffd54f; right: 10vw; top: 18vh; animation-delay: 2s; }
-        .bg3 { width: 320px; height: 320px; background: #ba68c8; left: 18vw; bottom: 8vh; animation-delay: 4s; }
-        .bg4 { width: 180px; height: 180px; background: #4db6ac; right: 16vw; bottom: 12vh; animation-delay: 6s; }
-        @keyframes floatBg {
-            0% { transform: translateY(0) scale(1); }
-            100% { transform: translateY(-30px) scale(1.07); }
+        .butterfly.b1 { left: 8vw; top: 60vh; animation-delay: 0s; }
+        .butterfly.b2 { left: 20vw; top: 80vh; animation-delay: 3s; }
+        .butterfly.b3 { left: 70vw; top: 75vh; animation-delay: 7s; }
+        .butterfly.b4 { left: 60vw; top: 20vh; animation-delay: 10s; }
+        .butterfly.b5 { left: 85vw; top: 40vh; animation-delay: 13s; }
+        @keyframes fly {
+            0%   { transform: translateY(0) scale(1) rotate(-10deg); opacity: 0.55; }
+            10%  { transform: translateY(-30px) scale(1.05) rotate(8deg); opacity: 0.7; }
+            20%  { transform: translateY(-60px) scale(1.1) rotate(-6deg); opacity: 0.8; }
+            30%  { transform: translateY(-90px) scale(1.08) rotate(10deg); opacity: 0.7; }
+            40%  { transform: translateY(-120px) scale(1.12) rotate(-8deg); opacity: 0.6; }
+            50%  { transform: translateY(-150px) scale(1.15) rotate(12deg); opacity: 0.5; }
+            60%  { transform: translateY(-180px) scale(1.1) rotate(-10deg); opacity: 0.6; }
+            70%  { transform: translateY(-210px) scale(1.08) rotate(8deg); opacity: 0.7; }
+            80%  { transform: translateY(-240px) scale(1.05) rotate(-6deg); opacity: 0.8; }
+            90%  { transform: translateY(-270px) scale(1.02) rotate(10deg); opacity: 0.7; }
+            100% { transform: translateY(-300px) scale(1) rotate(-10deg); opacity: 0.55; }
         }
 
         /* Home-Button */
@@ -206,12 +217,14 @@
 <body>
 
 
-    <!-- Animierte Hintergrundkreise -->
-    <div class="bg-circles">
-        <div class="bg-circle bg1"></div>
-        <div class="bg-circle bg2"></div>
-        <div class="bg-circle bg3"></div>
-        <div class="bg-circle bg4"></div>
+
+    <!-- Animierte Schmetterlinge im Hintergrund -->
+    <div class="butterfly-bg">
+        <svg class="butterfly b1" viewBox="0 0 48 48"><g><ellipse cx="24" cy="24" rx="7" ry="16" fill="#ffd54f"/><ellipse cx="13" cy="24" rx="10" ry="18" fill="#ba68c8"/><ellipse cx="35" cy="24" rx="10" ry="18" fill="#81c784"/><ellipse cx="24" cy="24" rx="4" ry="8" fill="#fffbe6"/><circle cx="24" cy="24" r="3" fill="#2f4f3a"/></g></svg>
+        <svg class="butterfly b2" viewBox="0 0 48 48"><g><ellipse cx="24" cy="24" rx="7" ry="16" fill="#ffd54f"/><ellipse cx="13" cy="24" rx="10" ry="18" fill="#ba68c8"/><ellipse cx="35" cy="24" rx="10" ry="18" fill="#81c784"/><ellipse cx="24" cy="24" rx="4" ry="8" fill="#fffbe6"/><circle cx="24" cy="24" r="3" fill="#2f4f3a"/></g></svg>
+        <svg class="butterfly b3" viewBox="0 0 48 48"><g><ellipse cx="24" cy="24" rx="7" ry="16" fill="#ffd54f"/><ellipse cx="13" cy="24" rx="10" ry="18" fill="#ba68c8"/><ellipse cx="35" cy="24" rx="10" ry="18" fill="#81c784"/><ellipse cx="24" cy="24" rx="4" ry="8" fill="#fffbe6"/><circle cx="24" cy="24" r="3" fill="#2f4f3a"/></g></svg>
+        <svg class="butterfly b4" viewBox="0 0 48 48"><g><ellipse cx="24" cy="24" rx="7" ry="16" fill="#ffd54f"/><ellipse cx="13" cy="24" rx="10" ry="18" fill="#ba68c8"/><ellipse cx="35" cy="24" rx="10" ry="18" fill="#81c784"/><ellipse cx="24" cy="24" rx="4" ry="8" fill="#fffbe6"/><circle cx="24" cy="24" r="3" fill="#2f4f3a"/></g></svg>
+        <svg class="butterfly b5" viewBox="0 0 48 48"><g><ellipse cx="24" cy="24" rx="7" ry="16" fill="#ffd54f"/><ellipse cx="13" cy="24" rx="10" ry="18" fill="#ba68c8"/><ellipse cx="35" cy="24" rx="10" ry="18" fill="#81c784"/><ellipse cx="24" cy="24" rx="4" ry="8" fill="#fffbe6"/><circle cx="24" cy="24" r="3" fill="#2f4f3a"/></g></svg>
     </div>
 
     <a href="index.html" class="button-home">🏡 Zur Startseite</a>
