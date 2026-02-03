@@ -73,6 +73,22 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
     </style>
+    <script>
+    // Nach 10 Sekunden ohne Klick auf ein Foto zurück zur Übersicht
+    let photoClicked = false;
+    window.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.photo').forEach(function(el) {
+            el.addEventListener('click', function() {
+                photoClicked = true;
+            });
+        });
+        setTimeout(function() {
+            if (!photoClicked) {
+                window.location.href = '/inspiration/index.html';
+            }
+        }, 10000);
+    });
+    </script>
 </head>
 
 <body>
