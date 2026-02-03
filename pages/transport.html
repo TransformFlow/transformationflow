@@ -15,10 +15,25 @@
             min-height: 100vh;
         }
 
-        a.back {
-            text-decoration: none;
-            color: #2f4f3a;
+        .home-btn {
+            display: inline-block;
+            background: #2ecc40;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 1.1rem;
             font-weight: bold;
+            text-decoration: none;
+            margin: 0;
+            box-shadow: 0 2px 8px rgba(46,204,64,0.15);
+            transition: background 0.2s;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+        .home-btn:hover {
+            background: #27ae60;
         }
 
         h1 {
@@ -30,7 +45,7 @@
 
 <body>
 
-   <a href="/home.html">Zurück</a>
+    <a href="/home.html" class="home-btn">Zurück zur Startseite</a>
 
     <h1>Transport & Raum</h1>
 
