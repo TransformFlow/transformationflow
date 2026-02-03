@@ -27,19 +27,13 @@
 		}
 	</style>
 	<script>
-	// Nach 10 Sekunden ohne Klick auf ein Foto zurück zur Übersicht
-	let photoClicked = false;
+	// Bei Klick irgendwo (außer auf ein Foto) zurück zur Übersicht
 	window.addEventListener('DOMContentLoaded', function() {
-		document.querySelectorAll('.photo').forEach(function(el) {
-			el.addEventListener('click', function() {
-				photoClicked = true;
-			});
-		});
-		setTimeout(function() {
-			if (!photoClicked) {
+		document.body.addEventListener('click', function(e) {
+			if (!e.target.closest('.photo')) {
 				window.location.href = '/inspiration/index.html';
 			}
-		}, 10000);
+		});
 	});
 	</script>
 </head>
